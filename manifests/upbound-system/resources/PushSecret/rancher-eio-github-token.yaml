@@ -1,0 +1,27 @@
+---
+apiVersion: external-secrets.io/v1alpha1
+kind: PushSecret
+metadata:
+  name: rancher-eio-github-token
+  namespace: secrets
+spec:
+  data:
+  - match:
+      remoteRef:
+        remoteKey: secret/data/rancher-eio-github-token/credentials
+      secretKey: credentials
+  deletionPolicy: Delete
+  refreshInterval: 1m
+  secretStoreRefs:
+  - kind: ClusterSecretStore
+    name: vault
+  selector:
+    secret:
+      name: credentials
+  template:
+    data:
+      credentials: |
+        {
+          "token": "{{ .password }}",
+          "owner": "{{ .username }}"
+        }

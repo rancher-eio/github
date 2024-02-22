@@ -1,0 +1,13 @@
+---
+apiVersion: repo.github.upbound.io/v1alpha1
+kind: Repository
+metadata:
+  name: backstage-templates
+  namespace: github-resources
+spec:
+  deletionPolicy: Orphan
+  forProvider:
+    name: backstage-templates
+    visibility: public
+  providerConfigRef:
+    name: rancher-eio

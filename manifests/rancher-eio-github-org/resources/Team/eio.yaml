@@ -1,0 +1,13 @@
+apiVersion: team.github.upbound.io/v1alpha1
+kind: Team
+metadata:
+  name: eio
+  namespace: github-resources
+  annotations:
+    crossplane.io/external-name: "9273181"
+spec:
+  deletionPolicy: Orphan
+  forProvider:
+    name: eio
+  providerConfigRef:
+    name: rancher-eio

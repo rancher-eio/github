@@ -1,0 +1,12 @@
+---
+apiVersion: github.upbound.io/v1beta1
+kind: ProviderConfig
+metadata:
+  name: rancher-eio
+spec:
+  credentials:
+    secretRef:
+      key: credentials
+      name: rancher-eio-github-token
+      namespace: upbound-system
+    source: Secret

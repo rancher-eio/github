@@ -1,0 +1,12 @@
+---
+apiVersion: github.upbound.io/v1beta1
+kind: ProviderConfig
+metadata:
+  name: rancher-k3s-io
+spec:
+  credentials:
+    secretRef:
+      key: credentials
+      name: rancherbot-k3s-io-token
+      namespace: upbound-system
+    source: Secret
