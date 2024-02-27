@@ -6,24 +6,16 @@ metadata:
 spec:
   externalSecretName: rancher-eio-github-token
   externalSecretSpec:
-    target:
-      name: rancher-eio-github-token
-      template:
-        data:
-          credentials: "{\"token\":\"{{  .token }}\",\"owner\":\"{{ .owner }}\"}"
     data:
     - remoteRef:
-        key: secret/rancher-eio-github-token/credentials
-        property: owner
-      secretKey: owner
-    - remoteRef:
-        key: secret/rancher-eio-github-token/credentials
-        property: token
-      secretKey: token
+        key: secret/rancherbot/rancher-eio/credentials
+      secretKey: credentials
     refreshInterval: 1m
     secretStoreRef:
       kind: ClusterSecretStore
       name: vault
+    target:
+      name: rancher-eio-github-token
   namespaces:
   - rancher-eio-github-org
   - upbound-system
