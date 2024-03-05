@@ -19,5 +19,4 @@ spec:
   namespaces:
   - rancher-eio-github-org
   - upbound-system
-  - backstage
   refreshTime: 1m
