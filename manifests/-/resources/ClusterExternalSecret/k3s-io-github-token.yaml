@@ -1,0 +1,22 @@
+---
+apiVersion: external-secrets.io/v1beta1
+kind: ClusterExternalSecret
+metadata:
+  name: k3s-io-github-token
+spec:
+  externalSecretName: k3s-io-github-token
+  externalSecretSpec:
+    data:
+    - remoteRef:
+        key: secret/rancherbot/k3s-io/credentials
+      secretKey: credentials
+    refreshInterval: 1m
+    secretStoreRef:
+      kind: ClusterSecretStore
+      name: vault
+    target:
+      name: k3s-io-github-token
+  namespaces:
+  - github-org-k3s-io
+  - upbound-system
+  refreshTime: 1m
