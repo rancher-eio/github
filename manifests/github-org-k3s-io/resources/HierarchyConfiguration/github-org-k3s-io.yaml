@@ -2,7 +2,7 @@
 apiVersion: hnc.x-k8s.io/v1alpha2
 kind: HierarchyConfiguration
 metadata:
-  name: github-org-k3s-io
+  name: hierarchy
   namespace: github-org-k3s-io
 spec:
   parent: github
