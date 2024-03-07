@@ -2,7 +2,7 @@
 apiVersion: hnc.x-k8s.io/v1alpha2
 kind: HierarchyConfiguration
 metadata:
-  name: hierarchy
+  name: github-org-harvester
   namespace: github-org-harvester
 spec:
   parent: github
