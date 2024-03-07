@@ -1,0 +1,16 @@
+---
+apiVersion: team.github.upbound.io/v1alpha1
+kind: Team
+metadata:
+  name: eio-guests
+  namespace: github-org-rancher-eio
+  # labels:
+  #     app: "backstage"
+  #     "backstage.io/kubernetes-id": "backstage-app"
+spec:
+  deletionPolicy: Orphan
+  forProvider:
+    name: eio-guests
+    privacy: closed
+  providerConfigRef:
+    name: rancher-eio

@@ -1,0 +1,20 @@
+apiVersion: team.github.upbound.io/v1alpha1
+kind: TeamMembership
+metadata:
+  # annotations:
+  #   meta.upbound.io/example-id: team/v1alpha1/teammembership
+  # labels:
+  #   testing.upbound.io/example-name: local_team_membership
+  name: eio
+  namespace: github-org-rancher-eio
+spec:
+  forProvider:
+    role: maintainer
+    teamIdRef:
+      name: "eio"
+    # teamIdSelector:
+    #   matchLabels:
+    #     testing.upbound.io/example-name: local-team
+    username: colstrom
+  providerConfigRef:
+    name: rancher-eio

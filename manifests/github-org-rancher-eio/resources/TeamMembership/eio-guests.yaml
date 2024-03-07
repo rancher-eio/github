@@ -1,0 +1,12 @@
+apiVersion: team.github.upbound.io/v1alpha1
+kind: TeamMembership
+metadata:
+  name: eio-guests
+  namespace: github-org-rancher-eio
+spec:
+  forProvider:
+    teamIdRef:
+      name: "eio-guests"
+    username: ivan-claire
+  providerConfigRef:
+    name: rancher-eio
