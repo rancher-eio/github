@@ -2,21 +2,21 @@
 apiVersion: external-secrets.io/v1beta1
 kind: ClusterExternalSecret
 metadata:
-  name: rancher-eio-github-token
+  name: rancher-github-token
 spec:
-  externalSecretName: rancher-eio-github-token
+  externalSecretName: rancher-github-token
   externalSecretSpec:
     data:
     - remoteRef:
-        key: secret/rancherbot/rancher-eio/credentials
+        key: secret/rancherbot/rancher/credentials
       secretKey: credentials
     refreshInterval: 1m
     secretStoreRef:
       kind: ClusterSecretStore
       name: vault
     target:
-      name: rancher-eio-github-token
+      name: rancher-github-token
   namespaces:
-  - github-org-rancher-eio
+  - github-org-rancher
   - upbound-system
   refreshTime: 1m
