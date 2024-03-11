@@ -1,0 +1,22 @@
+---
+apiVersion: external-secrets.io/v1beta1
+kind: ClusterExternalSecret
+metadata:
+  name: rancherlabs-github-token
+spec:
+  externalSecretName: rancherlabs-github-token
+  externalSecretSpec:
+    data:
+    - remoteRef:
+        key: secret/rancherbot/rancherlabs/credentials
+      secretKey: credentials
+    refreshInterval: 1m
+    secretStoreRef:
+      kind: ClusterSecretStore
+      name: vault
+    target:
+      name: rancherlabs-github-token
+  namespaces:
+  - github-org-rancherlabs
+  - upbound-system
+  refreshTime: 1m
