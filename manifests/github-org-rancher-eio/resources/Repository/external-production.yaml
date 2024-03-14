@@ -1,0 +1,13 @@
+---
+apiVersion: repo.github.upbound.io/v1alpha1
+kind: Repository
+metadata:
+  name: external-production
+  namespace: github-org-rancher-eio
+spec:
+  deletionPolicy: Orphan
+  forProvider:
+    name: external-production
+    visibility: private
+  providerConfigRef:
+    name: rancher-eio
