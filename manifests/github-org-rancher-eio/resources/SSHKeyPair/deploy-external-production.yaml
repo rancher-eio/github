@@ -4,4 +4,5 @@ kind: SSHKeyPair
 metadata:
   name: deploy-external-production
   namespace: github-org-rancher-eio
-spec: {}
+spec:
+  type: ed25519
