@@ -5,4 +5,4 @@ metadata:
   name: deploy-external-production
   namespace: github-org-rancher-eio
 spec:
-  type: ed25519
+  length: "3072"
