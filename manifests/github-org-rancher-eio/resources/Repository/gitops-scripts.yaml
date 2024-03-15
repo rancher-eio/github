@@ -1,0 +1,13 @@
+---
+apiVersion: repo.github.upbound.io/v1alpha1
+kind: Repository
+metadata:
+  name: gitops-scripts
+  namespace: github-org-rancher-eio
+spec:
+  deletionPolicy: Orphan
+  forProvider:
+    name: gitops-scripts
+    visibility: private
+  providerConfigRef:
+    name: rancher-eio
