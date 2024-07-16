@@ -1,0 +1,17 @@
+apiVersion: team.github.upbound.io/v1alpha1
+kind: Team
+metadata:
+  name: foo
+  namespace: github-org-rancher-eio
+  annotations:
+    backstage.io/kubernetes-id: foo
+  labels:
+    backstage.io/kubernetes-id: foo
+spec:
+  deletionPolicy: Orphan
+  forProvider:
+    name: foo
+    
+    privacy: closed
+  providerConfigRef:
+    name: rancher-eio
