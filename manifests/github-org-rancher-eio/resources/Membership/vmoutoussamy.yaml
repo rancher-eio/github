@@ -1,0 +1,14 @@
+---
+apiVersion: user.github.upbound.io/v1alpha1
+kind: Membership
+metadata:
+  name: vmoutoussamy
+  namespace: github-org-rancher-eio
+spec:
+  deletionPolicy: Orphan
+  forProvider:
+    downgradeOnDestroy: true
+    role: admin
+    username: vmoutoussamy
+  providerConfigRef:
+    name: rancher-eio-app

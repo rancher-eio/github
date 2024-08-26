@@ -1,0 +1,12 @@
+---
+apiVersion: github.upbound.io/v1beta1
+kind: ProviderConfig
+metadata:
+  name: rancher-eio-app
+spec:
+  credentials:
+    secretRef:
+      key: app_auth
+      name: rancher-eio-automated-org-management
+      namespace: github-org-rancher-eio
+    source: Secret
