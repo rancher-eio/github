@@ -7,7 +7,7 @@ metadata:
 spec:
   deletionPolicy: Orphan
   forProvider:
-    name: org-test
+    name: org-test-renamed
     visibility: private
   providerConfigRef:
     name: rancher-eio-app
