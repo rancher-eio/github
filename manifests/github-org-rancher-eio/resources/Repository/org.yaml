@@ -2,12 +2,12 @@
 apiVersion: repo.github.upbound.io/v1alpha1
 kind: Repository
 metadata:
-  name: org-test
+  name: org
   namespace: github-org-rancher-eio
 spec:
   deletionPolicy: Orphan
   forProvider:
-    name: org-test-renamed
+    name: org-test
     visibility: private
   providerConfigRef:
     name: rancher-eio-app
