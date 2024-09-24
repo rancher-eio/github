@@ -2,8 +2,7 @@
 apiVersion: team.github.upbound.io/v1alpha1
 kind: Team
 metadata:
-  name: okta-eio-users
-  namespace: github-org-rancherlabs
+  name: rancherlabs--okta-eio-users
 spec:
   deletionPolicy: Delete
   forProvider:

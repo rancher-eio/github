@@ -2,13 +2,12 @@
 apiVersion: team.github.upbound.io/v1alpha1
 kind: Team
 metadata:
-  name: okta-non-ecm-users
-  namespace: github-org-rancher
+  name: rancher--okta-ecm-users
 spec:
   deletionPolicy: Delete
   forProvider:
     createDefaultMaintainer: false
-    name: okta-non-ecm-users
+    name: okta-ecm-users
     privacy: closed
   providerConfigRef:
     name: rancher
