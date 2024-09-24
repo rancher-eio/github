@@ -6,7 +6,7 @@ metadata:
 spec:
   credentials:
     secretRef:
-      key: credentials
-      name: rancherlabs-github-token
-      namespace: upbound-system
+      key: app_auth
+      name: rancher-eio-automated-org-management
+      namespace: github-org-rancherlabs
     source: Secret
