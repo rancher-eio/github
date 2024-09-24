@@ -11,4 +11,4 @@ spec:
     role: admin
     username: Anarkis
   providerConfigRef:
-    name: rancher-eio-app
+    name: rancher-eio

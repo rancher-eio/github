@@ -11,4 +11,4 @@ spec:
     role: admin
     username: ital0sant0s
   providerConfigRef:
-    name: rancher-eio-app
+    name: rancher-eio

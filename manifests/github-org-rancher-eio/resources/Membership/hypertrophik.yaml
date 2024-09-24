@@ -11,4 +11,4 @@ spec:
     role: admin
     username: Hypertrophik
   providerConfigRef:
-    name: rancher-eio-app
+    name: rancher-eio
