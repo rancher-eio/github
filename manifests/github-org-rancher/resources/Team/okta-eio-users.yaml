@@ -1,0 +1,14 @@
+---
+apiVersion: team.github.upbound.io/v1alpha1
+kind: Team
+metadata:
+  name: okta-eio-users
+  namespace: github-org-rancher
+spec:
+  deletionPolicy: Delete
+  forProvider:
+    createDefaultMaintainer: false
+    name: okta-eio-users
+    privacy: closed
+  providerConfigRef:
+    name: rancher
