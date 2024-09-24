@@ -33,5 +33,5 @@ spec:
                 "pem_file": {{ mustToJson .pem_file }}
               }
             ],
-            "owner": "rancher-eio"
+            "owner": "rancher"
           }
