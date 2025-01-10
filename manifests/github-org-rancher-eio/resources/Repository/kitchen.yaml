@@ -10,6 +10,6 @@ spec:
   deletionPolicy: Orphan
   forProvider:
     name: kitchen
-    visibility: private
+    visibility: internal
   providerConfigRef:
     name: rancher-eio
