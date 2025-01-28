@@ -1,0 +1,60 @@
+apiVersion: enterprise.github.upbound.io/v1alpha1
+kind: OrganizationRuleset
+metadata:
+  name: default-ruleset-test
+spec:
+  deletionPolicy: Orphan
+  forProvider:
+    name: "default-test"
+    enforcement: "evaluate" 
+    target: "branch"
+    # Conditions configuration
+    conditions:
+      - refName:
+          exclude: []
+          include: ["~DEFAULT_BRANCH"]
+        repositoryName:
+          exclude: 
+            - "eio*"
+            - "security-team"
+            - "product-docs-playbook"
+            - "support-bundle-kit"
+            - "elemental*"
+          include: ["*"]
+    # Rules configuration
+    rules:
+      - type: "deletion"
+      - type: "non_fast_forward"
+      - type: "pull_request"
+        parameters:
+          requiredApprovingReviewCount: 2
+          dismissStaleReviewsOnPush: false
+          requireCodeOwnerReview: false
+          requireLastPushApproval: false
+          requiredReviewThreadResolution: false
+          allowedMergeMethods: 
+            - "MERGE"
+            - "SQUASH"
+            - "REBASE"
+    # Bypass actors configuration
+    bypassActors:
+      - actorType: "EnterpriseOwner"
+        bypassMode: "always"
+        actorId: ""  # null in original JSON
+      - actorType: "OrganizationAdmin"
+        bypassMode: "always"
+        actorId: ""
+      - actorType: "Team"
+        bypassMode: "always"
+        actorId: "1087529"
+      - actorType: "Team"
+        bypassMode: "always"
+        actorId: "5837354"
+      - actorType: "Team"
+        bypassMode: "always"
+        actorId: "6332922"
+      - actorType: "Team"
+        bypassMode: "always"
+        actorId: "6567330"
+  providerConfigRef:
+    name: github  # Reference to your GitHub provider config
