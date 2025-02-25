@@ -1,13 +1,13 @@
 apiVersion: enterprise.github.upbound.io/v1alpha1
 kind: OrganizationRuleset
 metadata:
-  name: rancher-default-ruleset-test
+  name: rancher-default-ruleset
 spec:
   providerConfigRef:
     name: rancher
   deletionPolicy: Orphan
   forProvider:
-    name: "rancher-default-test"
+    name: "rancher-default-ruleset"
     enforcement: "evaluate"
     target: "branch"
     conditions:
