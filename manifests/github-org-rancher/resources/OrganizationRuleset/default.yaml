@@ -20,7 +20,6 @@ spec:
               - "*"
             exclude:
               - "eio*"
-              - "security-team"
               - "product-docs-playbook"
               - "support-bundle-kit"
               - "elemental*"
@@ -29,7 +28,7 @@ spec:
       - deletion: true
         nonFastForward: true
         pullRequest:
-          - requiredApprovingReviewCount: 2
+          - requiredApprovingReviewCount: 1
             dismissStaleReviewsOnPush: false
             requireCodeOwnerReview: false
             requireLastPushApproval: false
@@ -40,6 +39,39 @@ spec:
         bypassMode: "always"
       - actorId: 0
         actorType: "OrganizationAdmin"
+        bypassMode: "always"
+      - actorId: 5
+        actorType: "RepositoryRole"
+        bypassMode: "always"
+      - actorId: 29110
+        actorType: "Integration"
+        bypassMode: "always"
+      - actorId: 269045
+        actorType: "Integration"
+        bypassMode: "always"
+      - actorId: 681210
+        actorType: "Integration"
+        bypassMode: "always"
+      - actorId: 860038
+        actorType: "Integration"
+        bypassMode: "always"
+      - actorId: 882665
+        actorType: "Integration"
+        bypassMode: "always"
+      - actorId: 979954
+        actorType: "Integration"
+        bypassMode: "always"
+      - actorId: 989984
+        actorType: "Integration"
+        bypassMode: "always"
+      - actorId: 999757
+        actorType: "Integration"
+        bypassMode: "always"
+      - actorId: 1010174
+        actorType: "Integration"
+        bypassMode: "always"
+      - actorId: 1127151
+        actorType: "Integration"
         bypassMode: "always"
       - actorId: 1087529
         actorType: "Team"
