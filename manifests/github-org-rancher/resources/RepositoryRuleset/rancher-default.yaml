@@ -1,0 +1,52 @@
+apiVersion: repo.github.upbound.io/v1alpha1
+kind: RepositoryRuleset
+metadata:
+  name: default-ruleset-test
+spec:
+  providerConfigRef:
+    name: rancher
+  deletionPolicy: Orphan
+  forProvider:
+    name: "default-ruleset-test"
+    repository: "rancher"
+    enforcement: "active"
+    target: "branch"
+    conditions:
+      - refName:
+          - include:
+              - "refs/heads/release/v2.9"
+              - "refs/heads/release/v2.8"
+              - "refs/heads/release/v2.9*"
+              - "refs/heads/release/v2.8*"
+              - "refs/heads/main"
+              - "refs/heads/master"
+              - "refs/heads/release/v2.7"
+              - "refs/heads/release/v2.*"
+              - "refs/heads/release/v2.10"
+            exclude:
+    rules:
+      - deletion: true
+        nonFastForward: true
+        creation: true
+        pullRequest:
+          - requiredApprovingReviewCount: 1
+            dismissStaleReviewsOnPush: true
+            requireCodeOwnerReview: false
+            requireLastPushApproval: true
+            requiredReviewThreadResolution: false
+    bypassActors:
+      - actorId: null
+        actorType: "OrganizationAdmin"
+        bypassMode: "always"
+      - actorId: 2
+        actorType: "RepositoryRole"
+        bypassMode: "pull_request"
+      - actorId: 5
+        actorType: "RepositoryRole"
+        bypassMode: "always"
+      - actorId: 1087529
+        actorType: "Team"
+        bypassMode: "always"
+      - actorId: 8828411
+        actorType: "Team"
+        bypassMode: "always"
