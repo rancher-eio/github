@@ -8,6 +8,6 @@ spec:
   deletionPolicy: Orphan
   forProvider:
     name: external-production
-    visibility: private
+    visibility: internal
   providerConfigRef:
     name: rancher-eio
